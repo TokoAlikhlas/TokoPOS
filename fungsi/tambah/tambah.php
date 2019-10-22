@@ -37,6 +37,28 @@
 		$row -> execute($data);
 		echo '<script>window.location="../../index2.php?page=barang&success=tambah-data"</script>';
 	}
+	if(!empty($_GET['profil'])){
+		$id = $_POST['id'];
+		$nama = $_POST['nama'];
+		$alamat = $_POST['alamat'];
+		$tlp = $_POST['tlp'];
+		$emai = $_POST['email'];
+		$nik = $_POST['nik'];
+		
+		
+		$data[] = $id;
+		$data[] = $nama;
+		$data[] = $alamat;
+		$data[] = $tlp;
+		$data[] = $emai;
+		$data[] = $nik;
+		
+		$sql = 'INSERT INTO member (id_member,nm_member,alamat_member,telepon,email,nik) 
+			    VALUES (?,?,?,?,?,?,?) ';
+		$row = $config -> prepare($sql);
+		$row -> execute($data);
+		echo '<script>window.location="../../index2.php?page=user&success=tambah-data"</script>';
+	}
 	if(!empty($_GET['jual'])){
 		$id = $_POST['id'];
 		$kasir = $_POST['kasir'];
