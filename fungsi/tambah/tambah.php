@@ -78,6 +78,22 @@
 		echo '<script>window.location="../../index2.php?page=user&success=tambah-data"</script>';
 	}
 
+	if(!empty($_GET['useradmin'])){
+		$id = $_POST['id'];
+		$user = $_POST['user'];
+		$pass = $_POST['pass'];
+				
+		$data[] = $id;
+		$data[] = $user;
+		$data[] = $pass;
+						
+		$sql = 'INSERT INTO loginadmin (id_loginadmin,user,pass) 
+			    VALUES (?,?,?) ';
+		$row = $config -> prepare($sql);
+		$row -> execute($data);
+		echo '<script>window.location="../../login.php?page=useradmin&success=tambah-data"</script>';
+	}
+
 	if(!empty($_GET['jual'])){
 		$id = $_POST['id'];
 		$kasir = $_POST['kasir'];

@@ -33,7 +33,8 @@
 
 	  <div id="login-page" style="padding-top:3pc;">
 	  	<div class="container">
-		      <form class="form-login" method="POST">
+      
+		      <form class="form-login" method="POST" action="fungsi/tambah/tambah.php?useradmin=tambah">
 		        <h2 class="form-login-heading">sign up now</h2>
 		        <div class="login-wrap">
 		            <input type="text" class="form-control" name="user" placeholder="Username" autofocus>
@@ -52,32 +53,6 @@
 	  	
 	  	</div>
 	  </div>
-	<?php
-		if(isset($_POST['proses'])){
-			require 'config.php';
-				
-			$user = $_POST['user'];
-			$pass = $_POST['pass'];
-
-			$sql = "SELECT * FROM loginadmin WHERE user = '$user'";
-			$row = $config -> prepare($sql);
-			if($query->num_rows != 0) {
-                echo "<div align='center'>Username Sudah Terdaftar! <a href='daftar.php'>Back</a></div>";
-              } else {
-                if(!$user || !$pass) {
-                  echo "<div align='center'>Masih ada data yang kosong! <a href='daftar.php'>Back</a>";
-                } else {
-                  $data = "INSERT INTO loginadmin VALUES (NULL, '$user', '$pass')";
-                  $simpan = $config -> prepare($sql);
-                  if($simpan) {
-                    echo "<div align='center'>Pendaftaran Sukses, Silahkan <a href='login.php'>Login</a></div>";
-                  } else {
-                    echo "<div align='center'>Proses Gagal!</div>";
-                  }
-                }
-              }
-		}
-		?>
     <!-- js placed at the end of the document so the pages load faster -->
     <script src="assets/js/jquery.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>

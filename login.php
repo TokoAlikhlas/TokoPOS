@@ -33,6 +33,11 @@
 
 	  <div id="login-page" style="padding-top:3pc;">
 	  	<div class="container">
+		  <?php if(isset($_GET['success'])){?>
+						<div class="alert alert-success">
+							<p>Tambah Data Berhasil !</p>
+						</div>
+						<?php }?>
 		      <form class="form-login" method="POST">
 		        <h2 class="form-login-heading">sign in now</h2>
 		        <div class="login-wrap">
