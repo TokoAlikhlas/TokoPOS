@@ -38,13 +38,13 @@
 														  <div class="input-group-addon">
 															<i class="fa fa-user"></i>
 														  </div>
-															<input type="text" class="form-control" style="border-radius:0px;" name="nama" data-items="4" value="<?php echo $hasil['nm_member']; ?>" required="required"/>
+															<input type="text" class="form-control" style="border-radius:0px;" name="nama" data-items="4"  required="required"/>
 														</div>
 													</div>
 													<div class="control-group">
 														<label class="control-label" for="typeahead">Alamat </label>
 														<div class="controls">
-															<textarea  name="alamat" rows="3" class="form-control" style="border-radius:0px;" required="required"><?php echo $hasil['alamat_member']; ?></textarea>
+															<textarea  name="alamat" rows="3" class="form-control" style="border-radius:0px;" required="required"></textarea>
 														</div>
 													</div>
 													<div class="control-group">
@@ -53,7 +53,7 @@
 														  <div class="input-group-addon">
 															<i class="fa fa-phone"></i>
 														  </div>
-															<input type="text" class="form-control" style="border-radius:0px;" name="tlp" value="<?php echo $hasil['telepon']; ?>" required="required"/>
+															<input type="text" class="form-control" style="border-radius:0px;" name="tlp"  required="required"/>
 														</div>
 													</div>
 													<div class="control-group">
@@ -62,34 +62,21 @@
 														  <div class="input-group-addon">
 															<i class="fa fa-envelope-square"></i>
 														  </div>
-															<input type="email" class="form-control" style="border-radius:0px;" name="email" value="<?php echo $hasil['email']; ?>" required="required"/>
+															<input type="email" class="form-control" style="border-radius:0px;" name="email"  required="required"/>
 														</div>
 													</div>
 													<br>
-													<div class="panel-footer">
-														<form method="POST" action="fungsi/edit/edit.php?gambar=user" enctype="multipart/form-data">
-															<input type="file" accept="image/*" name="foto">
-															<input type="hidden" value="<?php echo $hasil['gambar'];?>" name="foto2">
-															<input type="hidden"  name="id" value="<?php echo $hasil['id_member'];?>">
-															<span class="pull-right">
-																<button type="submit"  class="btn btn-primary btn-sm" value="Tambah"><i class="fa fa-pencil"> Pilih Foto</i></button>
-															</span>
-														</form>
-														<br/>
-														<br/>
-													</div>
 													<div class="control-group">
 														<label class="control-label" for="typeahead">NIK ( KTP ) </label>
 														<div class="input-group">
 														  <div class="input-group-addon">
 															<i class="fa fa-user"></i>
 														  </div>
-															<input type="text" class="form-control" style="border-radius:0px;" name="nik" value="<?php echo $hasil['NIK']; ?>" required="required"/>
+															<input type="text" class="form-control" style="border-radius:0px;" name="nik"  required="required"/>
 														</div>
 													</div>													
 													<br>
 													<div class="form-actions pull-right">
-														<input type="hidden" name="id" value="<?php echo $hasil['id_member']; ?>">
 														<button class="btn btn-primary" name="btn" value="Tambah" style="border-radius:0px;"><i class="fa fa-pencil"></i> Tambah User Kasir </button>
 													</div>
 												</fieldset>

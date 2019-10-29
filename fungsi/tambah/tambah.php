@@ -53,8 +53,8 @@
 		$data[] = $emai;
 		$data[] = $nik;
 		
-		$sql = 'INSERT INTO member (id_member,nm_member,alamat_member,telepon,email,nik) 
-			    VALUES (?,?,?,?,?,?,?) ';
+		$sql = 'INSERT INTO member (id_member,nm_member,alamat_member,telepon,email,NIK) 
+			    VALUES (?,?,?,?,?,?) ';
 		$row = $config -> prepare($sql);
 		$row -> execute($data);
 		echo '<script>window.location="../../index2.php?page=user&success=tambah-data"</script>';

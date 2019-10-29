@@ -67,7 +67,7 @@
 
 			$sql = 'select member.*, login.user, login.pass
 					from member inner join login on member.id_member = login.id_member
-					where user =? and pass = md5(?)';
+					where user =? and pass = ?';
 			$row = $config -> prepare($sql);
 			$row -> execute(array($user,$pass));
 			$jum = $row -> rowCount();
