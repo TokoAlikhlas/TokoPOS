@@ -59,6 +59,25 @@
 		$row -> execute($data);
 		echo '<script>window.location="../../index2.php?page=user&success=tambah-data"</script>';
 	}
+
+	if(!empty($_GET['user'])){
+		$id = $_POST['id'];
+		$user = $_POST['user'];
+		$pass = $_POST['pass'];
+		$idmember = $_POST['idmember'];		
+		
+		$data[] = $id;
+		$data[] = $user;
+		$data[] = $pass;
+		$data[] = $idmember;
+				
+		$sql = 'INSERT INTO login (id_login,user,pass,id_member) 
+			    VALUES (?,?,?,?) ';
+		$row = $config -> prepare($sql);
+		$row -> execute($data);
+		echo '<script>window.location="../../index2.php?page=user&success=tambah-data"</script>';
+	}
+
 	if(!empty($_GET['jual'])){
 		$id = $_POST['id'];
 		$kasir = $_POST['kasir'];
