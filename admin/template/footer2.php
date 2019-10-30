@@ -2,7 +2,7 @@
       <!--footer start-->
       <footer class="site-footer">
           <div class="text-center">
-              2017 - Sistem Penjualan Barang Berbasis Web
+              2019 - SIstem Penjualan Toko Al-Ikhlas
               <a href="#" class="go-top">
                   <i class="fa fa-angle-up"></i>
               </a>
