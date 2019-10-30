@@ -20,14 +20,6 @@
 							<p>Hapus Data Berhasil !</p>
 						</div>
 						<?php }?>
-						<form method="POST" action="fungsi/tambah/tambah.php?kategori=tambah">
-							<table>
-								<tr>
-									<td style="width:15pc;"><input type="text" class="form-control" name="kategori" placeholder="Masukan Kategori Barang Baru"></td>
-									<td><button id="tombol-simpan" class="btn btn-primary"><i class="fa fa-plus"></i> Insert Data</button></td>
-								</tr>
-							</table>
-						</form>
 						<br/>
 						<table class="table table-bordered" id="example1">
 							<thead>
