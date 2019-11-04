@@ -165,7 +165,7 @@
 				return $hasil;
 			}
 			function jumlah_nota(){
-				$sql ="SELECT SUM(total) as bayar FROM nota";
+				$sql ="SELECT SUM(total) as bayar FROM laporan";
 				$row = $this -> db -> prepare($sql);
 				$row -> execute();
 				$hasil = $row -> fetch();

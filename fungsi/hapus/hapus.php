@@ -52,7 +52,7 @@
 	}
 	if(!empty($_GET['laporan'])){
 		
-		$sql = 'DELETE FROM nota';
+		$sql = 'DELETE FROM laporan';
 		$row = $config -> prepare($sql);
 		$row -> execute();
 		echo '<script>window.location="../../index.php?page=laporan&remove=hapus"</script>';
