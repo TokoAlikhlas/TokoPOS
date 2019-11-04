@@ -97,10 +97,10 @@
 															<input type="number" name="jumlah" value="<?php echo $isi['jumlah'];?>" class="form-control">
 															<input type="hidden" name="id" value="<?php echo $isi['id_penjualan'];?>" class="form-control">
 															<input type="hidden" name="id_barang" value="<?php echo $isi['id_barang'];?>" class="form-control">
-													</td>
-													<td>Rp.<?php echo number_format($isi['total']);?>,-</td>
-													<td><?php echo $isi['nm_member'];?></td>
-													<td>
+															</td>
+															<td>Rp.<?php echo number_format($isi['total']);?>,-</td>
+															<td><?php echo $isi['nm_member'];?></td>
+															<td>
 															<button class="btn btn-warning">Update</button>
 														</form>
 														<a href="fungsi/hapus/hapus.php?jual=jual&id=<?php echo $isi['id_penjualan'];?>&brg=<?php echo $isi['id_barang'];?>

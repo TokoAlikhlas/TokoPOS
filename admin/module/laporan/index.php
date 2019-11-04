@@ -34,7 +34,7 @@
 									</tr>
 								</thead>
 								<tbody>
-									<?php $no=1; $hasil = $lihat -> penjualan();?>
+									<?php $no=1; $hasil = $lihat -> laporan();?>
 									<?php foreach($hasil as $isi){;?>
 									<tr>
 										<td><?php echo $no;?></td>

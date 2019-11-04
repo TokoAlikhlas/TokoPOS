@@ -146,6 +146,17 @@
 				$hasil = $row -> fetchAll();
 				return $hasil;
 			}
+			function laporan(){
+				$sql ="SELECT laporan.* , barang.id_barang, barang.nama_barang, member.id_member,
+						member.nm_member from laporan 
+					   left join barang on barang.id_barang=laporan.id_barang 
+					   left join member on member.id_member=laporan.id_member
+					   ORDER BY id_penjualan";
+				$row = $this-> db -> prepare($sql);
+				$row -> execute();
+				$hasil = $row -> fetchAll();
+				return $hasil;
+			}
 			function jumlah(){
 				$sql ="SELECT SUM(total) as bayar FROM penjualan";
 				$row = $this -> db -> prepare($sql);
