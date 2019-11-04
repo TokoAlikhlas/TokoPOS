@@ -142,6 +142,12 @@
 													<button class="btn btn-default">
 														<i class="fa fa-print"></i> Print Untuk Bukti Pembayaran
 													</button></a>
+													<br>
+													<form action="fungsi/tambah/tambah.php?laporan=tambah" method="POST">
+													<button class="btn btn-default">
+													Laporan
+													</button></a>
+													</form>
 												</td>
 
 											</tr>

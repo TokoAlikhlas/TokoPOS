@@ -106,7 +106,18 @@
 		$data1[] = $jumlah;
 		$data1[] = $total;
 		$data1[] = $tgl;
+		
 		$sql1 = 'INSERT INTO penjualan (id_barang,id_member,jumlah,total,tanggal_input) VALUES (?,?,?,?,?)';
+		$row1 = $config -> prepare($sql1);
+		$row1 -> execute($data1);
+		echo '<script>window.location="../../index.php?page=jual&success=tambah-data"</script>';
+	}
+	if(!empty($_GET['laporan'])){	
+		$sql1 = '
+			INSERT INTO laporan (id_barang,id_member,jumlah,total,tanggal_input)
+			SELECT id_barang,id_member,jumlah,total,tanggal_input FROM penjualan
+		';
+		// $sql1 = 'INSERT INTO penjualan (id_barang,id_member,jumlah,total,tanggal_input) VALUES (?,?,?,?,?)';
 		$row1 = $config -> prepare($sql1);
 		$row1 -> execute($data1);
 		echo '<script>window.location="../../index.php?page=jual&success=tambah-data"</script>';
