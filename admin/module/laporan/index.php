@@ -8,10 +8,20 @@
           <section class="wrapper">
               <div class="row">
                   <div class="col-lg-12 main-chart">
- 					<div class="col-md-4">
- 						<input type="date" class="form-control" name="startdate" placeholder="Start Date"/>
-						<input type="date" class="form-control" name="enddate" placeholder="End Date"/>
-					</div>
+				  	<form action="fungsi/view/view.php" method="post">
+						<table border="0">
+							<tr>
+								<td width="125"><b>Dari Tanggal</b></td>
+								<td colspan="2" width="190">: <input type="date" name="tanggal_awal" size="16" />                
+								</td>
+								<td width="125"><b>Sampai Tanggal</b></td>
+								<td colspan="2" width="190">: <input type="date" name="tanggal_akhir" size="16" />
+								</td>
+								<td colspan="2" width="190"><input type="submit" value="Pencarian Data" name="pencarian"/></td>
+								<td colspan="2" width="70"><input type="reset" value="Reset" /></td>
+							</tr>
+						</table>
+					</form>
 						<!-- view barang -->	
 						<div class="modal-view">
 							<table class="table table-bordered" id="example1">
