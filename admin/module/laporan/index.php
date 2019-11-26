@@ -6,19 +6,12 @@
       <!--main content start-->
       <section id="main-content">
           <section class="wrapper">
-
               <div class="row">
                   <div class="col-lg-12 main-chart">
-						<h3>Data Laporan
-							<a  style="padding-left:2pc;" href="fungsi/hapus/hapus.php?laporan=jual" onclick="javascript:return confirm('Data Laporan akan di Hapus ?');">
-								<button class="btn btn-danger">RESET</button>
-							</a>
-						</h3>
-						<?php if(isset($_GET['remove'])){?>
-						<div class="alert alert-danger">
-							<p>Hapus Data Berhasil !</p>
-						</div>
-						<?php }?>
+ 					<div class="col-md-4">
+ 						<input type="date" class="form-control" name="startdate" placeholder="Start Date"/>
+						<input type="date" class="form-control" name="enddate" placeholder="End Date"/>
+					</div>
 						<!-- view barang -->	
 						<div class="modal-view">
 							<table class="table table-bordered" id="example1">
